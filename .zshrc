@@ -29,12 +29,13 @@ case ${OSTYPE} in
   
   linux*)
   # Prioritize WLS linuxbrew PATH over manual install PATH
-  export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
-  
-  export NODEBREW_ROOT=/home/linuxbrew/.linuxbrew/var/nodebrew
+  export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
   ;;
 esac
 
 # Customize to your needs.
 setopt nolistbeep
 setopt no_beep
+
+# permission
+umask 002
